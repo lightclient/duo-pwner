@@ -15,7 +15,11 @@ adb shell am start -a android.intent.action.VIEW -d "$DUO_URL"
 sleep 3
 
 # choose webview browser
-adb shell input tap 10 700
+# adb shell input tap 10 700
+# sleep 1
+
+# choose duo mobile
+adb shell input tap 10 500
 sleep 1
 
 # choose just once
@@ -23,8 +27,8 @@ adb shell input tap 280 800
 sleep 6
 
 # tap redirect link to duo
-adb shell input tap 280 350
-sleep 6
+# adb shell input tap 280 350
+# sleep 6
 
 # tap maybe later button
 adb shell input tap 200 800

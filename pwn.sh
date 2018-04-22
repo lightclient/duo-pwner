@@ -26,8 +26,7 @@ if ! type "docker" >/dev/null 2>/dev/null; then
 fi
 
 # stop old containers
-docker stop duo-pwner >/dev/null 2>/dev/null
-docker rm duo-pwner >/dev/null 2>/dev/null
+docker stop duo-pwner >/dev/null 2>/dev/null && docker rm duo-pwner >/dev/null 2>/dev/null
 
 
 # run container
@@ -39,7 +38,7 @@ echo
 
 # sleep for 75 seconds while we wait for the system to boot up
 echo "Booting up VM"
-for i in {1..10}
+for i in {1..15}
 do
   sleep 3
   echo -n ". "
@@ -54,7 +53,7 @@ echo
 docker exec -d duo-pwner /root/run.sh
 
 echo "pwning . . . ( tune into 0.0.0.0:6080 for the show )"
-for i in {1..8}
+for i in {1..15}
 do
   sleep 3
   echo -n ". "
