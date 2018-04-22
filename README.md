@@ -25,7 +25,7 @@
 6. Run the following command in your terminal.
 
 ```
-curl https://raw.githubusercontent.com/c-o-l-o-r/duo-pwner/master/pwn.sh | bash -s YOUR_ACTIVATION_LINK
+curl -s https://raw.githubusercontent.com/c-o-l-o-r/duo-pwner/master/pwn.sh | bash -s YOUR_ACTIVATION_LINK
 ```
 
 ![](/images/command-line.png)
