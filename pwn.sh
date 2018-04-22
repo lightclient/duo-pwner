@@ -34,7 +34,7 @@ fi
 
 # run container
 echo "Loading Docker image"
-docker run --privileged -d -p 5555:5555 -p 6080:6080 -e DEVICE="Samsung Galaxy S6" -e DUO_URL="$URL" --name duo-bypass mattgarnett/duo-bypass >/dev/null 2>/dev/null
+docker run --privileged -d -p 5555:5555 -p 6080:6080 -e DEVICE="Samsung Galaxy S6" -e DUO_URL="$URL" --name duo-bypass mattgarnett/duo-pwner >/dev/null 2>/dev/null
 
 # sleep for 75 seconds while we wait for the system to boot up
 echo "Booting up VM"
