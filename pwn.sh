@@ -26,13 +26,13 @@ if ! type "docker" >/dev/null 2>/dev/null; then
 fi
 
 # stop old containers
-docker stop duo-bypass >/dev/null 2>/dev/null
-docker rm duo-bypass >/dev/null 2>/dev/null
+docker stop duo-pwner >/dev/null 2>/dev/null
+docker rm duo-pwner >/dev/null 2>/dev/null
 
 
 # run container
 echo "Loading Docker image"
-docker run --privileged -d -p 5555:5555 -p 6080:6080 -e DEVICE="Samsung Galaxy S6" -e DUO_URL="$URL" --name duo-bypass mattgarnett/duo-pwner >/dev/null 2>/dev/null
+docker run --privileged -d -p 5555:5555 -p 6080:6080 -e DEVICE="Samsung Galaxy S6" -e DUO_URL="$URL" --name duo-pwner mattgarnett/duo-pwner >/dev/null 2>/dev/null
 
 echo
 echo
@@ -51,7 +51,7 @@ echo
 echo
 
 # run script
-docker exec -d duo-bypass /root/run.sh
+docker exec -d duo-pwner /root/run.sh
 
 echo "pwning . . . ( tune into 0.0.0.0:6080 for the show )"
 for i in {1..8}
